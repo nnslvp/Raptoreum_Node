@@ -36,12 +36,4 @@ docker run \
 - `RPC_PASSWORD`: RPC password
 - `TESTNET`: Set to `1` for testnet, `0` for mainnet
 - `EXTERNALIP`: Your external IP address
-
-### Bootstrap
-
-For a fast setup, run the `bootstrap.sh` script inside the Docker container:
-
-```bash
-docker exec -it raptoreum_node /bin/bash
-./bootstrap.sh
-```
+- `FORCE_BOOTSTRAP`: Set to `1` to force bootstrap

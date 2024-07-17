@@ -5,6 +5,15 @@ DIR='/raptoreum/.raptoreumcore'
 CONF_FILE='raptoreum.conf'
 FILE=$DIR/$CONF_FILE
 
+if [ -n "$CONF" ] && [ -e "$FILE" ]; then
+  rm $FILE
+fi
+
+if [ "$FORCE_BOOTSTRAP" == "true" ] && [ -d $DIR ]; then
+    rm -rf $DIR
+    bootstrap.sh
+fi
+
 # Create directory and config file if it does not exist yet
 mkdir -p $DIR
 cat <<EOF >$FILE
