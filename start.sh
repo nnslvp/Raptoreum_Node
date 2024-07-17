@@ -20,6 +20,7 @@ cat <<EOF >$FILE
 rpcuser=${RPC_USER}
 rpcpassword=${RPC_PASSWORD}
 rpcallowip=172.0.0.0/8
+rpcallowip=127.0.0.1
 rpcbind=0.0.0.0
 server=1
 listen=1
