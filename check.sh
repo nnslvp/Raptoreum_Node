@@ -134,13 +134,13 @@ function CheckBlockHeight () {
         # but the height did not change compared to previous check.
         echo "1" >/tmp/was_stuck
         echo " Height difference is more than 3 blocks behind the network. Send kill signal..."
-      tryToKillDaemonGracefullyFirst
+        tryToKillDaemonGracefullyFirst
       elif [[ $(ReadValue "/tmp/was_stuck") -lt 0 ]]; then
         # Node was not able to respond. It is probably stuck but try to restart
         # it once before trying to bootstrap or restore it.
         echo "1" >/tmp/was_stuck
         echo " Node was unresponsive for the first time. Send kill signal..."
-      tryToKillDaemonGracefullyFirst
+        tryToKillDaemonGracefullyFirst
       else
         # Node is most probably very stuck and if trying to sync wrong chain branch.
         # This meand simple raptoreumd kill will not help and we need to
