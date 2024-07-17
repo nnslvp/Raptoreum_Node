@@ -21,16 +21,22 @@ rpcuser=${RPC_USER}
 rpcpassword=${RPC_PASSWORD}
 rpcallowip=172.0.0.0/8
 rpcallowip=127.0.0.1
-rpcallowip=${RPC_ALLOW_IP}
 rpcbind=0.0.0.0
 server=1
 listen=1
-testnet=${TESTNET}
 externalip=${EXTERNALIP}
 addnode=lbdn.raptoreum.com
 addnode=explorer.raptoreum.com
 printtoconsole=1
 EOF
+if [ -n "${RPC_ALLOW_IP}" ]; then
+  echo "rpcallowip=${RPC_ALLOW_IP}" >> $FILE
+fi
+# Добавляем testnet, если переменная установлена
+if [ -n "${TESTNET}" ]; then
+  echo "testnet=${TESTNET}" >> $FILE
+fi
+
 
 # Setup logrotate for debug log
 touch /etc/logrotate.d/rtmdebuglog
