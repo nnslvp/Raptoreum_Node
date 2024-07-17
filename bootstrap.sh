@@ -7,7 +7,7 @@ POWCACHE='https://bootstrap.raptoreum.com/powcaches/powcache.dat'
 if [ ! -d $DIR ]; then
   mkdir -p $DIR
   curl -L $BOOTSTRAP_TAR | tar xJ -C $DIR
-  curl -L $POWCACHE > $DIR//powcache.dat
+  curl -L $POWCACHE >$DIR//powcache.dat
 else
   echo "Datadir has been detected so bootstrap will not be used..."
 fi

@@ -11,11 +11,12 @@ WALLET_TAR=$(curl -s https://api.github.com/repos/Raptor3um/raptoreum/releases/l
 if pgrep $COIN_DAEMON; then
   $COIN_CLI stop
   mkdir temp
-  curl -L $WALLET_TAR | tar xz -C ./temp; mv ./temp/$COIN_DAEMON ./temp/$COIN_CLI ./temp/$COIN_TX $COIN_PATH
+  curl -L $WALLET_TAR | tar xz -C ./temp
+  mv ./temp/$COIN_DAEMON ./temp/$COIN_CLI ./temp/$COIN_TX $COIN_PATH
   $COIN_DAEMON
 else
   mkdir temp
-  curl -L $WALLET_TAR | tar xz -C ./temp; mv ./temp/$COIN_DAEMON ./temp/$COIN_CLI ./temp/$COIN_TX $COIN_PATH
+  curl -L $WALLET_TAR | tar xz -C ./temp
+  mv ./temp/$COIN_DAEMON ./temp/$COIN_CLI ./temp/$COIN_TX $COIN_PATH
   rm -rf temp
 fi
- 
