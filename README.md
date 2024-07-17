@@ -37,3 +37,4 @@ docker run \
 - `TESTNET`: Set to `1` for testnet, `0` for mainnet
 - `EXTERNALIP`: Your external IP address
 - `FORCE_BOOTSTRAP`: Set to `1` to force bootstrap
+- `RPC_ALLOW_IP`: Allow RPC from IP address
