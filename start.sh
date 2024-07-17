@@ -21,6 +21,7 @@ rpcuser=${RPC_USER}
 rpcpassword=${RPC_PASSWORD}
 rpcallowip=172.0.0.0/8
 rpcallowip=127.0.0.1
+rpcallowip=${RPC_ALLOW_IP}
 rpcbind=0.0.0.0
 server=1
 listen=1
