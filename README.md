@@ -25,7 +25,7 @@ docker run \
   -e RPC_USER=<your_rpc_user> \
   -e RPC_PASSWORD=<your_rpc_password> \
   -e EXTERNALIP=<your_IP> \
-  -v /root/smartnode:/raptoreum \
+  -v raptoreum:/raptoreum \
   --restart=unless-stopped \
   raptoreum_node
 ```
