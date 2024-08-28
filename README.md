@@ -9,7 +9,7 @@ Docker container for running a Raptoreum node.
 Build the Docker image:
 
 ```bash
-docker build -t raptoreum_node .
+docker build -t raptoreum-node .
 ```
 
 ### Run the Docker Container
